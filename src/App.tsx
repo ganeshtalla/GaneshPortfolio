@@ -4,10 +4,7 @@ import NavBar from "./components/NavBar";
 import "./App.css";
 import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
-import WorkSection from "./components/WorkSection";
-
-import EducationSection from "./components/EducationSection";
-import Techstack from "./components/TechnicalSkills";
+import WorkEducationSection from "./components/WorkEducationSection";
 import Projects from "./components/Projects";
 function App() {
   return (
@@ -15,9 +12,7 @@ function App() {
       <NavBar />
       <HeroSection />
       <AboutSection />
-      <WorkSection />
-      <Techstack />
-      <EducationSection />
+      <WorkEducationSection />
       <Projects />
       <Footer />
     </div>

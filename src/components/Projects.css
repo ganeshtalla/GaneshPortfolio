@@ -3,66 +3,90 @@
 }
 
 .projects-section {
-    /* padding: 2rem; */
-    background-color: black; /* Or any other background color */
+    background-color: black;
     padding: 4rem;
-  }
-  
-  .project-card {
-    border: none;
-    border-radius: 20px;
-    background: linear-gradient(145deg, #1c1c1c, #171717); /* Subtle gradient */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-    color: white; /* Text color */
-    overflow: hidden; /* Ensure the image doesn't overflow the border-radius */
-    /* transition: transform 0.3s ease-in-out; */
-    transition: transform 0.3s ease-in-out;
-    border: 2px solid white; /* Adds a light grey border */
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); 
-  }
-  
-  .project-card:hover {
-    transform: scale(1.15); /* Adjust scale value as needed */
-    z-index: 10; /* Ensures the card is above others when scaled */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
-    border-color: #a2a2a2; /* Darkens the border on hover */
+}
 
-  }
-  
-  
-  .project-card img {
-    height: 200px;
-    object-fit: cover; /* Ensure the image covers the card area */
-  }
-  
-  .project-card .card-body {
-    position: relative;
-  }
-  
-  .project-card .card-title {
-    font-size: 1.25rem; /* Title font size */
-    margin-bottom: 0.75rem;
-  }
-  
-  .project-card .card-text {
-    font-size: 0.9rem; /* Text font size */
-  }
-  
-  .project-tags {
+.projects-list {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-entry {
+    display: flex;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: padding-left 0.2s ease;
+}
+
+.project-entry:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-entry:hover {
+    padding-left: 0.5rem;
+}
+
+.project-entry-date {
+    flex: 0 0 150px;
+    color: #9AA5D3;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 0.2rem;
+}
+
+.project-entry-body {
+    flex: 1;
+    min-width: 0;
+    color: #fff;
+}
+
+.project-entry-title {
+    font-size: 1.4rem;
+    margin: 0 0 0.75rem 0;
+    color: #fff;
+}
+
+.project-entry-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #dfd9ff;
+    margin-bottom: 1rem;
+}
+
+.project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem; /* Space between tags */
-  }
-  
-  .tag {
-    display: inline-block;
-    background-color: #6e4d9b; /* Tag background color */
-    color: #fff;
-    border-radius: 10px;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-  }
-  
-  /* Responsive adjustments can be made with media queries if necessary */
-  
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-entry-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #d48806;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.project-entry-link:hover {
+    color: #ffc53d;
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .project-entry {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .project-entry-date {
+        flex: none;
+        padding-top: 0;
+    }
+}
