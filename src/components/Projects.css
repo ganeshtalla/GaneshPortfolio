@@ -79,6 +79,15 @@
     text-decoration: underline;
 }
 
+.project-entry-private {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #9AA5D3;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 640px) {
     .project-entry {
         flex-direction: column;
